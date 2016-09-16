@@ -1,0 +1,76 @@
+Answers to the General Part of the exercise
+
+- Describe how you have handled persistence in the last three semesters. 
+The considerations should include all relevant layers. File IO, Relational Databases, 
+local storage and cookies in browsers.
+
+First of all, I have only been here 2 full semester. I am currently on my third
+semester. So i cannot explain how i have handled persistence in the last three 
+semesters, only the last 2. 
+
+In the first semester I used dot.txt (local storage) files to save data, 
+using java commands.
+
+In the first semester i also used ORM. It enables you to write the persistence classes 
+using object oriented classes.
+
+In the second semester I used transactions to mysql in the Polygon exam project, because the
+database had relations. Transactions also helped with the handling of the primary and
+foreign keys.  
+
+In the second semester I stored data in the browser as cookies, in order
+to save what the user had clicked on previously for example.
+
+- Explain the Pros & Cons in using an Object Relational Mapping Framework
+
+Pros of the Object Relational Mapping Framework:
+
+Portable: ORM is used so that you write your structure once and ORM layer will 
+handle the final statement that is suitable for the configured DBMS. This is an 
+excellent advantage as simple operation like limit is added as 'limit 0,100' at 
+the end of select statement in MySQL, while it is 'select top 100 from table' in 
+MS SQL.
+
+Nesting of data: in case of relationships, the ORM layer will pull the data 
+automatically for you.
+
+Single language: you don't have to know SQL language to deal the database only your 
+development language.
+
+Adding is like modifying: most ORM layers treat adding new data (SQL insert) 
+and updating data (SQL Update) in the same way, these makes writing and 
+maintaining code a piece of cake.
+
+Cons of the Object Relational Mapping Framework: 
+
+Slow: if you compare the performance between writing raw SQL or using ORM, 
+you will find raw much faster as there is no translation layer.
+
+Tuning: if you know SQL language and your default DBMS well, then you can use 
+your knowledge to make queries faster but this is not the same when using ORM.
+
+Complex Queries: some ORM layers have limitations especially when executing 
+queries so sometimes you will find yourself writing raw SQL.
+
+Studying: in case you are working in a big data project and you are not 
+happy with the performance, you will find yourself studying the ORM layer so 
+that you can minimize the DBMS hits.
+
+- Elaborate on some of the problems a ORM tries to solve
+
+ORM is a programming ability to covert data from object type to relational type 
+and vice versa. ORM makes it a lot easier to handle data from the database. 
+Because we create objects to mimic the structure and data of the database. 
+
+- Explain the basic “components” involved when using Java’s JPA
+
+One of my favorite components is the EntityManagerFactory. This is a factory 
+class of EntityManager. It creates and manages multiple EntityManager instances.
+
+In JPA we use entities which are the persistence objects, stores as records 
+in the database.
+
+Also EntityTransaction. It has one-to-one relationship with EntityManager. 
+For each EntityManager, operations are maintained by EntityTransaction class.
+
+Persistence, This class contain static methods to obtain EntityManagerFactory instance.
